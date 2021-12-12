@@ -28,6 +28,8 @@
 
 
             <article class="my-3 fs-5">
+                <p>price : {{ $post->price}} </p>    
+           
                 {{ $post->body }}
             </article>
 

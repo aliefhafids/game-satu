@@ -5,8 +5,10 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\DashboardOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +55,11 @@ Route::get('/dashboard', function(){
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+Route::get('/order', [OrderController::class, 'index'])->middleware('guest');
+Route::post('/order', [OrderController::class, 'store']);
+
+Route::resource('/dashboard/orders', DashboardOrderController::class)->middleware('auth');
 
 
 

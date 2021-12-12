@@ -42,12 +42,12 @@
             <small class="text-muted">
                 By. <a href="/posts?author={{ $posts[0]->author->username 
     }}"> {{ $posts[0]->author->name}}</a> in <a href="/posts?category={{ $posts[0]->category->slug }}">
-                    {{ $posts[0]->category->name }}</a>{{ $posts[0]->created_at->diffForHumans() }}
+                    {{ $posts[0]->category->name }}</a> {{ $posts[0]->created_at->diffForHumans() }}
             </small>
         </p>
-        <p class="card-text">{{ $posts[0]->excerpt }}</p>
+        <p class="card-text">Rp. {{ $posts[0]->price }}</p>
 
-        <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more..</a>
+        <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
 
     </div>
 </div>
@@ -76,10 +76,10 @@
                     <p>
                         <small class="text-muted">
                             By. <a href="/posts?author={{ $post->author->username }}">
-                                {{ $post->author->name}}</a>{{ $post->created_at->diffForHumans() }}
+                                {{ $post->author->name}}</a> {{ $post->created_at->diffForHumans() }}
                         </small>
                     </p>
-                    <p class="card-text">{{ $post->excerpt }}</p>
+                    <p class="card-text">Rp. {{ $post->price }}</p>
                     <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read more</a>
                 </div>
             </div>

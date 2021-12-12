@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'awm'
         ]);
 
-        Post::factory(5)->create();
+        // Post::factory(5)->create();
 
 //         Post::create([
 //             'title' => 'Judul Pertama',

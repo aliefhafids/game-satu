@@ -19,7 +19,7 @@
                         href="/categories">CATEGORIES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">ABOUT</a>
+                    <a class="nav-link {{ Request::is('order') ? 'active' : '' }}" href="/order">ORDER</a>
                 </li>
             </ul>
 </nav>
