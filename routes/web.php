@@ -36,7 +36,7 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function(){
     return view('categories', [
-        'title' => 'Post Categories',
+        'title' => 'Item Categories',
         'categories' =>Category::all()
     ]);
 });
@@ -61,5 +61,9 @@ Route::post('/order', [OrderController::class, 'store']);
 
 Route::resource('/dashboard/orders', DashboardOrderController::class)->middleware('auth');
 
+
+Route::get('/dashboard/whatsapp', function () {
+    return redirect()->away('https://web.whatsapp.com/');
+});
 
 

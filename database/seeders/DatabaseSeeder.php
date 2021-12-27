@@ -32,19 +32,26 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Category::create([
-            'name' => 'Rifle',
-            'slug' => 'rifle'
+            'name' => 'SMGs',
+            'slug' => 'smgs'
         ]);
 
         Category::create([
-            'name' => 'Shotgun',
-            'slug' => 'shotgun'
+            'name' => 'Shotguns',
+            'slug' => 'shotguns'
         ]);
 
         Category::create([
-            'name' => 'Awm',
-            'slug' => 'awm'
+            'name' => 'Sniper',
+            'slug' => 'sniper'
         ]);
+
+         Category::create([
+            'name' => 'Rifles',
+            'slug' => 'rifles'
+        ]);
+
+
 
         // Post::factory(5)->create();
 

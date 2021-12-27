@@ -19,6 +19,12 @@
                     Order
                 </a>
             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/dashboard/whatsapp">
+                    <span data-feather="phone"></span>
+                    WhatsApp
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

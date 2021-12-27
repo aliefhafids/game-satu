@@ -41,6 +41,17 @@
             </select>
         </div>
 
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price"
+               required value="{{ old('price', $post->price) }}">
+            @error('price')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+
          <div class="mb-3">
             <label for="image" class="form-label">Post Image</label>
             <input type="hidden" name="oldImage" value="{{ $post->image }}">
@@ -58,7 +69,6 @@
             </div>
             @enderror
         </div>
-
 
 
         <div class="mb-3">
